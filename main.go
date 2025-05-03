@@ -7,6 +7,10 @@ var (
   b = 40
 )
 
+func add() {
+  fmt.Println("hello")
+}
+
 func main() {
 	func(a, b int){
 		res := a + b 
