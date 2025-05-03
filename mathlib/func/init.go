@@ -2,16 +2,8 @@ package main
 
 import "fmt"
 
-var (
-  a = 10 
-  b = 40
-)
-
 func main() {
-	func(a, b int){
-		res := a + b 
-		fmt.Println(res)
-	}(4, 7)
+	fmt.Println("hello i am main")
 }
 
 func init() {

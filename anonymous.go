@@ -3,15 +3,15 @@ package main
 import "fmt"
 
 var (
-  a = 10 
-  b = 40
+	a = 10
+	b = 30
 )
 
 func main() {
-	func(a, b int){
+	fun(a int, b int){
 		res := a + b 
 		fmt.Println(res)
-	}(4, 7)
+	}(4, 7) //(4, 7) this IIFE
 }
 
 func init() {
