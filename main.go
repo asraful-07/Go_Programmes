@@ -2,17 +2,22 @@ package main
 
 import "fmt"
 
-var (
-  a = 10 
-  b = 40
-)
+// var (
+//   a = 10 
+//   b = 40
+// )
 
-func sum(a, b int) { //parameter a, b
+func call(p,q int, func op(a, b int)) {
+	op(p,q)
+}
+
+func sum(a, b int) {
 	c := a + b
   fmt.Println(c)
 }
 
+
+
 func main() {
-sum(6, 7) //argument 6, 7
-	
+call(6,7, sum)
 }

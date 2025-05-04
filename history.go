@@ -148,6 +148,73 @@ func init() {
   // a = 30
 }
 
+// **************
+package main
+
+import "fmt"
+
+var (
+  a = 10 
+  b = 40
+)
+
+func sum(a, b int) { //parameter a, b
+	c := a + b
+  fmt.Println(c)
+}
+
+func main() {
+sum(6, 7) //argument 6, 7
+	
+}
+
+
+// *******
+package main
+
+import "fmt"
+
+// var (
+//   a = 10 
+//   b = 40
+// )
+
+func call() func(a, b int) {
+	return sum
+}
+
+func sum(a, b int) {
+	c := a + b
+  fmt.Println(c)
+}
+
+func main() {
+	add := call()
+	add(4, 9)
+}
+
+// ************
+package main
+
+import "fmt"
+
+// var (
+//   a = 10 
+//   b = 40
+// )
+
+func call(p,q int, func op(a, b int)) {
+	op(p,q)
+}
+
+func sum(a, b int) {
+	c := a + b
+  fmt.Println(c)
+}
+
+func main() {
+call(6,7, sum)
+}
 
 
 
