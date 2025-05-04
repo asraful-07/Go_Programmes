@@ -7,17 +7,12 @@ var (
   b = 40
 )
 
-func add() {
-  fmt.Println("hello")
+func sum(a, b int) { //parameter a, b
+	c := a + b
+  fmt.Println(c)
 }
 
 func main() {
-	func(a, b int){
-		res := a + b 
-		fmt.Println(res)
-	}(4, 7)
-}
-
-func init() {
-	fmt.Println("but i am fist run and next you")
+sum(6, 7) //argument 6, 7
+	
 }

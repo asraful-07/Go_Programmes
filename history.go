@@ -56,7 +56,7 @@ func main() {
  add(a, b)
 }
 
-// *****************
+// ***************** shadding func
 package main
 
 import (
