@@ -2,22 +2,39 @@ package main
 
 import "fmt"
 
-// var (
-//   a = 10 
-//   b = 40
-// )
+var (
+  a = 10 
+  b = 40
+)
 
-func call(p,q int, func op(a, b int)) {
-	op(p,q)
+func outer() func() {
+	money := 100
+	age := 22 
+
+	fmt.Println("my age =", age)
+
+	show := func(){
+		money = a + b
+		fmt.Println("money", money)
+	}
+	return show
 }
 
-func sum(a, b int) {
-	c := a + b
-  fmt.Println(c)
-}
+func call() {
+	incr1 := outer()
+	incr1()
+	incr1()
 
+	incr2 := outer()
+	incr2()
+	incr2()
+}
 
 
 func main() {
-call(6,7, sum)
+call()
+}
+
+func init() {
+	fmt.Println("=== Bank ===")
 }

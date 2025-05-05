@@ -216,6 +216,30 @@ func main() {
 call(6,7, sum)
 }
 
+// *******
+package main
+
+import "fmt"
+
+var (
+  a = 10 
+  b = 40
+)
+
+func call(p, q int) {
+	z := p + q 
+	fmt.Println(z)
+}
+
+func sum(a, b int) {
+	c := a + b
+  fmt.Println(c)
+}
+
+func main() {
+call(6, a)
+sum(10, 3)
+}
 
 
 
