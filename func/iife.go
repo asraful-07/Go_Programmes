@@ -138,7 +138,7 @@ func main() {
 func(a int, b int) { //if block
 c := a + b 
 fmt.Println(c)
-}(6, 7)
+}(6, 7) // iife (6, 7)
 
   // fmt.Println("welcome to my application", a)
 }

@@ -2,46 +2,37 @@ package main
 
 import "fmt"
 
-type User struct{
-	name string    //member variable  or property
-	age int
+type Off struct{
+	Name string
+	Age  int
 }
 
-func printUsrDetails(usr User) {
-	fmt.Println("Name :", usr.name)  
-	fmt.Println("Age :", usr.age) 
+var add = [4]int{4, 5, 6, 7}
+
+func modifyArray(num *[10]int) {
+    (*num)[3] = 90
 }
 
-func (us User) printDetails() {
-	fmt.Println("Name :", us.name)  
-	fmt.Println("Age :", us.age) 
-}
-
-func (usr User) call(a int){
-	fmt.Println(usr.name)
-	fmt.Println(a)
+func modifyObject(p *Off) {
+	p.Name = "GG"
 }
 
 func main() {
-	var user1 User
- 
-	user1 = User{ //instaniate
-	name: "Rahat",
-	age: 22,
- }
 
-//  printUsrDetails(user1)
-user1.printDetails()
+	ff := Off{
+		Name: "FF",
+		Age: 10,
+	}
+	fmt.Println(ff)
 
-user1.call(12)
+	modifyObject(&ff)
+	fmt.Println(ff)
 
- var user2 User
+    arr := [10]int{7, 8, 6, 6, 6}
+    fmt.Println("Before:", arr)
+    fmt.Println("Add:", add)
 
- user2 = User{ // Instance or object
-	name: "sara",
-	age: 22,
- }
+    modifyArray(&arr)
 
- printUsrDetails(user2)
-
+    fmt.Println("After:", arr)
 }
