@@ -242,5 +242,31 @@ sum(10, 3)
 }
 
 
+// *********
+package main
+
+import "fmt"
+
+func ChengSlice(p []int) []int {
+	p[0] = 10
+	p = append(p, 11)
+	return p
+}
+
+func main() {
+	x := []int{1, 2, 3, 4, 5, 6}
+
+	x = append(x, 7)
+	x = append(x, 8)
+
+	y := x[4:]
+
+	a := ChengSlice(y)
+
+	fmt.Println(y, len(y), cap(y))
+	fmt.Println(a, len(a), cap(a))
+}
+
+
 
 
