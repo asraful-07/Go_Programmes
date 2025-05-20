@@ -12,6 +12,7 @@ func printUsrDetails(usr User) {
 	fmt.Println("Age :", usr.age) 
 }
 
+// এটা একটা Receiver Function
 func (us User) printDetails() {
 	fmt.Println("Name :", us.name)  
 	fmt.Println("Age :", us.age) 
