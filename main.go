@@ -2,31 +2,16 @@ package main
 
 import "fmt"
 
-// type Person struct {
-// 	name string
-// 	age int
-// 	hight int
-// 	class string
-// }
-
-// func (p Person) receiver() {
-//   fmt.Println("Name :", p.name)
-//   fmt.Println("Age :", p.age)
-//   fmt.Println("Hight :", p.hight)
-//   fmt.Println("Class :", p.class)
-// }
-
-
 func main() {
-ab := make([]int, 8)
+    var x int = 10
+    var p *int = &x  // x এর address নিচ্ছি
 
-fmt.Println(ab)
-fmt.Println(len(ab))
-fmt.Println(cap(ab))
+    fmt.Println("x এর মান:", x)       // 10
+    fmt.Println("x এর address:", &x)  // x এর মেমোরি address
+    fmt.Println("p এর মান:", p)       // p তে x এর address আছে
+    fmt.Println("*p:", *p)            // *p মানে, সেই address এ গিয়ে মান পড়া, মানে 10
 
+    *p = 20  // পয়েন্টার ব্যবহার করে x এর মান পরিবর্তন
+
+    fmt.Println("x এর নতুন মান:", x)  // এখন x এর মান ২০ হয়ে গেছে
 }
-
-func init() {
-	fmt.Println("Hello I am first run")
-}
-  

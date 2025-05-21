@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 	var s []int         // এখানে s হলো একটা খালি slice, মানে এর len = 0, cap = 0
-	s = append(s, 1)    // len = 1, cap = 1
-	s = append(s, 2)    // len = 2, cap = 2
+	s = append(s, 9)    // len = 1, cap = 1
+	s = append(s, 7)    // len = 2, cap = 2
 	s = append(s, 3)    // len = 3, cap = 4  <-- এখানে Go নিজে থেকে capacity বাড়িয়ে নেয়
 	
 	r := s              // এখন r এবং s একই backing array শেয়ার করে
