@@ -2,19 +2,26 @@ package main
 
 import "fmt"
 
-func main() {
-  var a float32 = 10.2345
-  var b string = "MY Name is Rahat"
-  var c bool =  false
-  var d int8 = 123
-  var e rune = 'অ' 
-  var j rune = '❤'
+// Struct definition with a type name
+type Person struct {
+	name   string
+	age    float32
+	class  [4]int8
+	isBool bool
+}
 
-  fmt.Printf("%.2f\n", a)
-  fmt.Printf("%Ts\n", b)
-  fmt.Printf(b)
-  fmt.Printf("%v\n", c)
-  fmt.Printf("%d\n", d)
-  fmt.Printf("%c\n", e)
-  fmt.Printf("%c\n", j)
+func main() {
+	// Declare a variable of type Person and initialize it
+	Person1 := Person{
+		name:   "Rahat",
+		age:    22.1,
+		class:  [4]int8{1, 2, 3, 4},
+		isBool: true,
+	}
+
+	// Print values
+	fmt.Printf("Name: %s\n", Person1.name)
+	fmt.Printf("Age: %.2f\n", Person1.age)
+	fmt.Printf("Class: %v\n", Person1.class)
+	fmt.Printf("isBool: %v\n", Person1.isBool)
 }
