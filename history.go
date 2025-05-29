@@ -268,5 +268,32 @@ func main() {
 }
 
 
+// ********* defer 
+package main
+
+import "fmt"
+
+func a() {
+	i := 0
+	 
+	fmt.Println("first :", i)
+
+	defer fmt.Println("second :", i)
+
+	i = i + 1 // i++
+
+	fmt.Println("third :", i)
+
+	defer fmt.Println("froth :", i)
+
+
+	return 
+}
+
+func main() {
+   a()
+
+
+}
 
 
