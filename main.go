@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func add() (result int) {
 
-}
 
 func main() {
-   add(4,8)
+add(great)
+}
 
-
+func init() {
+   fmt.Println("Hello I am first exc")
 }
