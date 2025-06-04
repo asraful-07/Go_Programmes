@@ -4,10 +4,11 @@ import "fmt"
 
 func main() {
  fmt.Println("what is This i am first execute")
-  defer  func(a,b int) {
+  x := func(a,b int) {
 	ab := a + b
     fmt.Printf("%d\n", ab)
-	}(2,2)
+	}
+  x(2,2)
 
 defer fmt.Println("This defer func")	
 }
