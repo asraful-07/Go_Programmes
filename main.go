@@ -12,7 +12,3 @@ func main() {
 
 defer fmt.Println("This defer func")	
 }
-
-func init() {
-	fmt.Println("hello I am init function")
-}
