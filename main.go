@@ -2,13 +2,27 @@ package main
 
 import "fmt"
 
-func main() {
- fmt.Println("what is This i am first execute")
-  x := func(a,b int) {
-	ab := a + b
-    fmt.Printf("%d\n", ab)
-	}
-  x(2,2)
+type Cars struct {
+	name string 
+	price float64
+	color string
+	body string
+}
 
-defer fmt.Println("This defer func")	
+func (p Cars) Receiver() {
+	fmt.Println(p.name)
+	fmt.Println(p.price)
+}
+
+func main() {
+person := Cars{
+	name: "tesla",
+	price: 46.276,
+	color: "blue",
+	body: "tata",
+}
+
+person.Receiver()
+
+
 }
