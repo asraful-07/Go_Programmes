@@ -3,15 +3,14 @@ package main
 import "fmt"
 
 type Cars struct {
-	name string 
+	name string  `Cars name`
 	price float64
 	color string
 	body string
 }
 
-func (p Cars) Receiver() {
-	fmt.Println(p.name)
-	fmt.Println(p.price)
+func modifyObject(p *Cars) {
+  p.color = "red"
 }
 
 func main() {
@@ -21,8 +20,8 @@ person := Cars{
 	color: "blue",
 	body: "tata",
 }
-
-person.Receiver()
-
+fmt.Println(person)
+modifyObject(&person)
+fmt.Println(person)
 
 }
