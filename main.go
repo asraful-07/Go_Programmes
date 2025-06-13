@@ -2,26 +2,14 @@ package main
 
 import "fmt"
 
-type Cars struct {
-	name string  `Cars name`
-	price float64
-	color string
-	body string
+func callback(name string) {
+	fmt.Println("Hi brother, ", name)
 }
 
-func modifyObject(p *Cars) {
-  p.color = "red"
+func greet(sayHi func(string)) {
+    sayHi("Rahat")
 }
 
 func main() {
-person := Cars{
-	name: "tesla",
-	price: 46.276,
-	color: "blue",
-	body: "tata",
-}
-fmt.Println(person)
-modifyObject(&person)
-fmt.Println(person)
-
+ greet(callback)
 }
