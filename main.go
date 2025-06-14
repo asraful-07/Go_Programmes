@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type Cars struct {
-	name string  `Cars name`
+	name string  
 	price float64
 	color string
 	body string
