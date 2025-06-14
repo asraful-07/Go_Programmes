@@ -11,14 +11,15 @@ func main() {
 	r := s              // এখন r এবং s একই backing array শেয়ার করে
 	s = append(s, 4)    // এখন s = [1 2 3 4], len = 4, cap = 4
 	s = append(s, 5)    // এখন capacity শেষ হয়ে গেছে (4 ছিল), তাই Go নতুন backing array বানায়
+	s = append(s, 6)   
 	
 	r = append(r, 4)    // r এখনো পুরাতন backing array ব্যবহার করছে, তাই ওখানে ৪ যোগ করে
 	s[0] = 10           // এটা নতুন backing array তে হচ্ছে, তাই r-এর উপর কোন প্রভাব নেই
 	
 
 
-    fmt.Println(s, len(s), cap(s))
-    fmt.Println(r, len(r), cap(r))
+    fmt.Println(s, len(s), cap(s))  //  [10 7 3 4 5 6] len(6)  cap(8)
+    fmt.Println(r, len(r), cap(r))  //  [9 7 3 4] len(4)  cap(4)
 }
 
 
