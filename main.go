@@ -13,6 +13,7 @@ type Cars struct {
 
 func modifyObject(p *Cars) {
   p.color = "red"
+  p.res[2] = 9646724
 }
 
 func modifyArray(a *[4]string) {
@@ -29,9 +30,9 @@ person := Cars{
 	sum: []string{"hi", "how", "are", "you"},
 }
 
-fmt.Println(person)
+defer fmt.Println("age",person)
 modifyObject(&person)
-fmt.Println(person)
+fmt.Println("pore",person)
 
 arr := [4]string{"A", "B", "C", "D"}
 

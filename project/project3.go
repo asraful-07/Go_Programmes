@@ -94,8 +94,8 @@ func main() {
 		fmt.Println("Incorrect!")
 	}
 
-	// Final Score
-	fmt.Printf("\nThanks for playing, %v!\nYour final score is: %d out of 6\n", name, score)
+  // Final Score
+  fmt.Printf("\nThanks for playing, %v!\nYour final score is: %d out of 6\n", name, score)
   present := (float64(score) / float64(num_que)) * 100
   fmt.Printf("Your Scored: %v%%", present)
 }
