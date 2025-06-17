@@ -1,43 +1,26 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "time"
+)
 
-type Cars struct {
-	name string  
-	price float64
-	color string
-	body string
-	res [4]int
-	sum []string
-}
+var a = 10
+const b = 11
 
-func modifyObject(p *Cars) {
-  p.color = "red"
-  p.res[2] = 9646724
-}
-
-func modifyArray(a *[4]string) {
- (*a)[2] = "H"
+func printHello(num int) {
+    fmt.Println("Hello Rahat", num)
 }
 
 func main() {
-person := Cars{
-	name: "tesla",
-	price: 46.276,
-	color: "blue",
-	body: "tata",
-	res: [4]int{1,2,3,4},
-	sum: []string{"hi", "how", "are", "you"},
-}
+    go printHello(1)
+    go printHello(2)
+    go printHello(3)
+    go printHello(4)
+    go printHello(5)
+    go printHello(6)
 
-defer fmt.Println("age",person)
-modifyObject(&person)
-fmt.Println("pore",person)
+    fmt.Println(a, "", b)
 
-arr := [4]string{"A", "B", "C", "D"}
-
-fmt.Printf("string%s\n", arr)
-modifyArray(&arr)
-fmt.Println(arr)
-
+    time.Sleep(1 * time.Second) 
 }
