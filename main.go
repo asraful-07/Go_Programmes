@@ -1,15 +1,38 @@
 package main
 
 import "fmt"
- 
+
+func first() (result int) {
+	fmt.Println("Result", result)
+
+	defer func() {
+		result += 2
+	}()
+
+	result = 6
+	fmt.Println("defer", result)
+
+	return // Returns 6 + 2 = 8
+}
+
+func first1() int{
+   result := 0
+	fmt.Println("Result", result)
+
+	defer func() {
+		result += 2
+	}()
+
+	result = 6
+	fmt.Println("defer", result)
+
+	return result // Returns 6 + 2 = 8
+}
+
 func main() {
-   x := 10
+  a := first()
+  fmt.Println("main a", a) // 8
 
-   increment := func() int{
-   x += 1
-   return x
-   }
-
-   fmt.Println(increment())
-   fmt.Println(increment())
+  b := first1()
+  fmt.Println("main b", b) //6
 }
