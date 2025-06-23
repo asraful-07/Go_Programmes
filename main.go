@@ -1,8 +1,15 @@
 package main
 
 import "fmt"
-
+ 
 func main() {
-      var arr [8]int = [8]int{1, 3, 4, 5, 6, 7, 8, 9}
-    fmt.Println("arr", arr)
+   x := 10
+
+   increment := func() int{
+   x += 1
+   return x
+   }
+
+   fmt.Println(increment())
+   fmt.Println(increment())
 }
