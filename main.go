@@ -34,5 +34,5 @@ func main() {
   fmt.Println("main a", a) // 8
 
   b := first1()
-  fmt.Println("main b", b) //6
+  fmt.Println("main b", b) // 6
 }
