@@ -1,38 +1,22 @@
 package main
 
-import "fmt"
+import ( "fmt" 
+        "time"
+    )
 
-func first() (result int) {
-	fmt.Println("Result", result)
-
-	defer func() {
-		result += 2
-	}()
-
-	result = 6
-	fmt.Println("defer", result)
-
-	return // Returns 6 + 2 = 8
+func HelloPrint(a,b int)  {
+	ab := a + b
+	fmt.Println("hello", ab)
 }
 
-func first1() int{
-   result := 0
-	fmt.Println("Result", result)
-
-	defer func() {
-		result += 2
-	}()
-
-	result = 6
-	fmt.Println("defer", result)
-
-	return result // Returns 6 + 2 = 8
-}
 
 func main() {
-  a := first()
-  fmt.Println("main a", a) // 8
+	x := 4
+ defer fmt.Println("hi how are you", x)
 
-  b := first1()
-  fmt.Println("main b", b) // 6
+  go HelloPrint(2, 4)
+  go HelloPrint(2, 4)
+  go HelloPrint(2, 4)
+  go HelloPrint(2, 4)
+  time.Sleep( 1 * time.Second)
 }
