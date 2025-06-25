@@ -1,22 +1,16 @@
 package main
 
-import ( "fmt" 
-        "time"
-    )
+import "fmt"
 
-func HelloPrint(a,b int)  {
-	ab := a + b
-	fmt.Println("hello", ab)
-}
-
+var a = 10
 
 func main() {
-	x := 4
- defer fmt.Println("hi how are you", x)
+    age := 30
 
-  go HelloPrint(2, 4)
-  go HelloPrint(2, 4)
-  go HelloPrint(2, 4)
-  go HelloPrint(2, 4)
-  time.Sleep( 1 * time.Second)
+    if age > 18 {
+        a := 47        //  শুধু এই if ব্লকের ভিতরে গ্লোবাল `a` কে shadow করে
+        fmt.Println(a) // ➜ 47
+    }
+
+    fmt.Println(a)     // ➜ 10 (গ্লোবাল `a` প্রিন্ট করে)
 }
