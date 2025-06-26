@@ -2,15 +2,16 @@ package main
 
 import "fmt"
 
-var a = 10
+
 
 func main() {
-    age := 30
+x := 20
+p := &x // p ভেরিয়েবল, x এর এড্রেস রাখে
 
-    if age > 18 {
-        a := 47        //  শুধু এই if ব্লকের ভিতরে গ্লোবাল `a` কে shadow করে
-        fmt.Println(a) // ➜ 47
-    }
+*p = 30 // এড্রেস p তে থাকা মান (x) পরিবর্তন করে
 
-    fmt.Println(a)     // ➜ 10 (গ্লোবাল `a` প্রিন্ট করে)
+fmt.Println(x)  // 30
+fmt.Println(p)  // x এর এড্রেস
+fmt.Println(*p) // 30 (এড্রেসে থাকা মান)
+
 }
