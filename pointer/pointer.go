@@ -38,7 +38,7 @@ func main() {
     fmt.Println("Before:", nums)
 }
 
-// &x হলো x এর ঠিকানা (address)
+// &x হলো x এর ঠিকানা (address) রাখে
 // *p দিয়ে আমরা x এর ঠিকানায় গিয়ে তার আসল মান পড়ি বা সেট করি।
 
 package main
