@@ -5,14 +5,14 @@ import (
 	"net/http"
 )
 
-func handleUsers(u http.ResponseWriter,t *http.Request){
-	fmt.Fprintln(u,"Hello bro how are you.")
-	fmt.Fprintln(u,"Hello bro how are you. And you bro?")
+func handleUsers(w http.ResponseWriter,r *http.Request){
+	fmt.Fprintln(w,"Hello bro how are you.")
+	fmt.Fprintln(w,"Hello bro how are you. And you bro?")
 }
 
-func handleProduct(u http.ResponseWriter,t *http.Request){
-	fmt.Fprintln(u,"This is product.")
-	fmt.Fprintln(u,"what is product?")
+func handleProduct(w http.ResponseWriter,r *http.Request){
+	fmt.Fprintln(w,"This is product.")
+	fmt.Fprintln(w,"what is product?")
 }
 
 func main() {
