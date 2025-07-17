@@ -343,3 +343,22 @@ func main() {
    fmt.Println(increment())
    fmt.Println(increment())
 }
+
+
+package main
+import "fmt"
+
+func main() {
+    day := 3 // day ভ্যারিয়েবলটি ৩ দেওয়া হয়েছে
+
+    switch day {
+    case 1:
+        fmt.Println("Sunday") // যদি day == 1 হয়, তাহলে Sunday প্রিন্ট হবে
+    case 2:
+        fmt.Println("Monday") // যদি day == 2 হয়, তাহলে Monday প্রিন্ট হবে
+    case 3:
+        fmt.Println("Tuesday") // যদি day == 3 হয়, তাহলে Tuesday প্রিন্ট হবে
+    default:
+        fmt.Println("Another day") // যদি কোন case না মিলে , তাহলে default অংশে চলে যাবে 
+    }
+}
